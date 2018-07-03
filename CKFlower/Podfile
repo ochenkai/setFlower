@@ -1,0 +1,12 @@
+
+target 'CKFlower' do
+  use_frameworks!
+
+  project './CKFlower.xcodeproj' 
+
+  pod 'Masonry', '~> 1.1.0'
+  pod 'AFNetworking', '~> 3.2.1'
+  pod 'SDWebImage', '~> 4.3.3'  
+
+end
+
