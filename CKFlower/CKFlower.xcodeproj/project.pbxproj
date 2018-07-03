@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0473CBEA20EB9A9900F48475 /* imgs.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0473CBE920EB9A9900F48475 /* imgs.xcassets */; };
+		0473CBEE20EB9C1600F48475 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0473CBED20EB9C1600F48475 /* LoginVC.m */; };
 		04F0990220EA74630042E90A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0990120EA74630042E90A /* AppDelegate.m */; };
 		04F0990520EA74630042E90A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0990420EA74630042E90A /* ViewController.m */; };
 		04F0990820EA74630042E90A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F0990620EA74630042E90A /* Main.storyboard */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0473CBE920EB9A9900F48475 /* imgs.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imgs.xcassets; sourceTree = "<group>"; };
+		0473CBEC20EB9C1600F48475 /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		0473CBED20EB9C1600F48475 /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		0473CBEF20EB9C8600F48475 /* flower.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = flower.pch; sourceTree = "<group>"; };
 		04F098FD20EA74620042E90A /* CKFlower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKFlower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F0990020EA74620042E90A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04F0990120EA74630042E90A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0473CBEB20EB9BF700F48475 /* LoginRegist */ = {
+			isa = PBXGroup;
+			children = (
+				0473CBEC20EB9C1600F48475 /* LoginVC.h */,
+				0473CBED20EB9C1600F48475 /* LoginVC.m */,
+			);
+			path = LoginRegist;
+			sourceTree = "<group>";
+		};
 		04F098F420EA74620042E90A = {
 			isa = PBXGroup;
 			children = (
@@ -112,10 +127,13 @@
 				04F0990120EA74630042E90A /* AppDelegate.m */,
 				04F0990320EA74630042E90A /* ViewController.h */,
 				04F0990420EA74630042E90A /* ViewController.m */,
+				0473CBEB20EB9BF700F48475 /* LoginRegist */,
 				04F0990620EA74630042E90A /* Main.storyboard */,
 				04F0990920EA74650042E90A /* Assets.xcassets */,
+				0473CBE920EB9A9900F48475 /* imgs.xcassets */,
 				04F0990B20EA74650042E90A /* LaunchScreen.storyboard */,
 				04F0990E20EA74650042E90A /* Info.plist */,
+				0473CBEF20EB9C8600F48475 /* flower.pch */,
 				04F0990F20EA74650042E90A /* main.m */,
 			);
 			path = CKFlower;
@@ -263,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F0990D20EA74650042E90A /* LaunchScreen.storyboard in Resources */,
+				0473CBEA20EB9A9900F48475 /* imgs.xcassets in Resources */,
 				04F0990A20EA74650042E90A /* Assets.xcassets in Resources */,
 				04F0990820EA74630042E90A /* Main.storyboard in Resources */,
 			);
@@ -349,6 +368,7 @@
 			files = (
 				04F0990520EA74630042E90A /* ViewController.m in Sources */,
 				04F0991020EA74650042E90A /* main.m in Sources */,
+				0473CBEE20EB9C1600F48475 /* LoginVC.m in Sources */,
 				04F0990220EA74630042E90A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,8 +540,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CKFlower/flower.pch";
 				INFOPLIST_FILE = CKFlower/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenkai.cktiantiantq.CKFlower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -534,8 +559,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CKFlower/flower.pch";
 				INFOPLIST_FILE = CKFlower/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenkai.cktiantiantq.CKFlower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -548,7 +578,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CKFlowerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenkai.cktiantiantq.CKFlowerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -562,7 +596,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CKFlowerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenkai.cktiantiantq.CKFlowerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -575,7 +613,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CKFlowerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenkai.cktiantiantq.CKFlowerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,7 +630,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CKFlowerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenkai.cktiantiantq.CKFlowerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
